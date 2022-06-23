@@ -13,7 +13,28 @@
     <?php
         require_once ROOT . DS . 'application' . DS . 'views' . DS . 'header.php';   
         require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Product.php';
-        $id = $_GET['productid'];  
+
+        if (!isset($_GET['productid']) || $_GET['productid'] == NULL) {
+            echo "<script>windows.location = 'home'</script>";
+        } else {
+            $id = $_GET['productid'];
+        }
+    
+        $customerID = Session::get('customer_id');
+        if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['compare'])) {
+            $productID = $_POST['productid'];
+            $insertCompare = $product->insert_compare($productID, $customerID);
+        }
+    
+        if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['wishlist'])) {
+            $productID = $_POST['productid'];
+            $insertWishlist = $product->insert_wishlist($productID, $customerID);
+        }
+    
+        if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['buybutton'])) {
+            $quantity = $_POST['buynumber'];
+            $addCart = $cart->add_to_cart($quantity, $id);
+        }  
 
         $getDetails = $product->get_details($id);
         if ($getDetails) {
@@ -39,15 +60,41 @@
             <span><?php echo number_format($result_details['price'], 0, ',', '.');?>₫</span>
             <br><br>
 
-            <form action="" method='POST'>
-                <input type="hidden" name="productid" value='<?php echo $result_details['productID'] ?>'/>   
+            <form action="" method="POST">
+                <?php
+                    $loginCheck = Session::get('customer_login');
+                    if ($loginCheck) { 
+                        echo 'Số lượng:';
+                        echo '<input type="number" name="buynumber" value="1" min="1"/>';
+                        echo '<input type="submit" name="buybutton" value="Thêm vào giỏ hàng"/>';
+                    }
+                ?>
+                
+                
+                
             </form>
-
+ 
             <form action="" method='POST'>
                 <input type="hidden" name="productid" value='<?php echo $result_details['productID'] ?>'/>   
-
+                <?php
+                    $loginCheck = Session::get('customer_login');
+                    if ($loginCheck) { 
+                        echo '<input type="submit" name="wishlist" value="Thêm vào Wishlist"/>';
+                    }
+                ?>
          
             </form>
+
+            <?php
+                if (isset($addCart)) {
+                    echo $addCart;
+                }
+
+                if (isset($insertWishlist)) {
+                    echo $insertWishlist;
+                }
+            ?>
+
             </div>
     </main>
     <?php
