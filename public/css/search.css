@@ -1,0 +1,39 @@
+input[type="text"] {
+  width: 400px;
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 20px;
+}
+
+input[type="submit"] {
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: #04aa6d;
+}
+
+.search-container {
+  float: center;
+  margin-left: 75px;
+}
+
+.search-container button {
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: #04aa6d;
+}
+
+.search-container form {
+  text-align: center;
+}
