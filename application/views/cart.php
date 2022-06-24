@@ -29,6 +29,13 @@
             $cartID = $_POST['cartID'];
             $updateQuantity = $cart->update_quantity($quantity, $cartID);
         }
+
+        if (isset($_GET['orderid'])) {
+            $customerID = Session::get('customer_id');
+            $insertOrder = $cart->insert_order($customerID);
+            $delCart = $cart->del_cart_data();
+            header('Location:payment');
+        }
     ?>
     
     <h1 style='text-align: center;'>GIỎ HÀNG</h1>
@@ -79,7 +86,7 @@
                 echo number_format($total, 0, ',', '.');
             ?>₫</td>
             <td>
-                <a onClick="return confirm('Bạn có muốn xóa sản phẩm khỏi giỏ hàng?')" href="?delID=<?php echo $result['cartID']?>">Xóa</a>
+                <a onClick="return confirm('Bạn có muốn xóa sản phẩm khỏi giỏ hàng?')" href="cart&delID=<?php echo $result['cartID']?>">Xóa</a>
             </td>
         </tr>
         <?php
@@ -119,7 +126,7 @@
 
     <?php
         if ($tempSum > 0) {
-            echo '<a href="payment"><img src="public/images/payment.png" alt="payment_pic" class="checkout"></a>';
+            echo '<a href="cart&orderid=order"><img src="public/images/payment.png" alt="payment_pic" class="checkout"></a>';
         }
     ?>
 

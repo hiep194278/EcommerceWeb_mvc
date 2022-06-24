@@ -43,7 +43,7 @@
                     $alert = "<span style='color:green;'>Thêm thành công</span>";
                     return $alert;
                 } else {
-                    header("Location:details.php?productid='$id'");
+                    header("Location:details&productid='$id'");
                 }
             }
         }
@@ -78,7 +78,7 @@
             $query = "DELETE FROM tbl_cart WHERE cartID='$cartID'";
             $result = $this->db->delete($query);
             if ($result) {
-                header('Location:cart.php');
+                header('Location:cart');
             } else {
                 $alert = "<span style='color:red;'>Sửa thất bại</span>";
                 return $alert;

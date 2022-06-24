@@ -13,7 +13,7 @@
 
         $login_check = Session::get('customer_login');
         if ($login_check) {
-            header('Location:home.php');
+            header('Location:home');
         }
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit']))

@@ -31,7 +31,7 @@
 
         $checkLogin = Session::get('customer_id');
         if ($checkLogin == false) {
-            header('Location:login.php');
+            header('Location:login');
         }
     
         $customerID = Session::get('customer_id');
