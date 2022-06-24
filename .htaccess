@@ -3,5 +3,4 @@
 
     RewriteRule (.*) public/$1 [L]
 
-    ErrorDocument 404 404.php
 </IfModule>

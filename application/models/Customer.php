@@ -62,7 +62,7 @@
                     Session::set('customer_login', true);
                     Session::set('customer_id', $value['customerID']);
                     Session::set('customer_name', $value['customerName']);
-                    header('Location:order');
+                    header('Location:home');
                 } else {
                     $alert = "<span style='color:red;'>Email hoặc mật khẩu không trùng khớp</span>";
                 }

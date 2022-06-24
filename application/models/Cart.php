@@ -137,12 +137,23 @@
             
             return $result;
         }
-                    
-        public function get_order_cart_period($from_date, $to_date) {
+        
+        public function get_order_cart_by_customer_id($id) {
 //            $query = "SELECT * FROM tbl_order ORDER BY orderDate";
 //            $result = $this->db->select($query);
 //            
 //            return $result;
+            $query = "SELECT DISTINCT orderDate, orderStatus,customerID FROM tbl_order WHERE customerID = '$id' ORDER BY orderDate";
+            $result = $this->db->select($query);
+            
+            return $result;
+        }
+        
+        public function get_order_cart_period($from_date, $to_date) {
+        //            $query = "SELECT * FROM tbl_order ORDER BY orderDate";
+        //            $result = $this->db->select($query);
+        //            
+        //            return $result;
             $query = "SELECT DISTINCT orderDate, orderStatus,customerID FROM tbl_order WHERE orderDate > '$from_date' AND orderDate < '$to_date' ORDER BY orderDate";
             $result = $this->db->select($query);
 
@@ -204,7 +215,7 @@
 
             return $result;
         }
-
+        
         public function get_detail_bill($customerID, $timeorder)
         {
             $customerID = mysqli_real_escape_string($this->db->link, $customerID);
@@ -214,7 +225,6 @@
 
             return $result;
         }
-
         public function get_all_sold_product_with_period($from_date, $to_date)
         {
             $query = "SELECT distinct productID, productName FROM tbl_order WHERE orderDate > '$from_date' AND orderDate < '$to_date' AND orderStatus = '2'";
@@ -222,7 +232,6 @@
 
             return $result;
         }
-
         public function get_all_sold_product()
         {
             $query = "SELECT distinct productID, productName FROM tbl_order WHERE orderStatus = '2'";
@@ -230,7 +239,6 @@
 
             return $result;
         }
-
         public function get_count_sold_product_with_period($id,$from_date, $to_date)
         {
             $query = "SELECT count(productID) as cnt FROM tbl_order WHERE orderDate > '$from_date' AND orderDate < '$to_date' AND productID = '$id' AND orderStatus = '2'";
@@ -238,7 +246,6 @@
 
             return $result;
         }
-
         public function get_count_sold_product($id)
         {
             $query = "SELECT count(productID) as cnt FROM tbl_order WHERE productID = '$id' AND orderStatus = '2'";
