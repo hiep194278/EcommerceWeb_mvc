@@ -4,6 +4,6 @@ require_once ROOT . DS . 'application' . DS . 'controllers' . DS . 'BaseControll
 
 class AdminController extends BaseController implements Controller{
     public function render() {
-        require_once ROOT . DS . 'application' . DS . 'views' . DS . 'admin.php'; 
+        require_once ROOT . DS . 'application' . DS . 'views' . DS . 'homeAdmin.php'; 
     }
 }

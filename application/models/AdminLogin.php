@@ -1,6 +1,6 @@
 <?php
-    require_once ROOT . DS . 'library' . DS . 'Session.php';
-    Session::checkLogin();
+    include_once ROOT . DS . 'library' . DS . 'Session.php';
+    Session::checkLoginAdmin();
     require_once ROOT . DS . 'library' . DS . 'Database.php';
     require_once ROOT . DS . 'helpers' . DS . 'Format.php';
 ?>

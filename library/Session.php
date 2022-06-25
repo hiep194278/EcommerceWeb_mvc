@@ -12,6 +12,7 @@ class Session{
             }
         }
     }
+    
 
     public static function set($key, $val){
         $_SESSION[$key] = $val;
@@ -39,6 +40,13 @@ class Session{
             header("Location:home");
         }
     }
+    
+    public static function checkLoginAdmin(){
+        self::init();
+        if (self::get("adminLogin") == true) {
+            header("Location:homeAdmin");
+        }
+    }
 
     public static function destroy(){
         session_destroy();
@@ -49,5 +57,6 @@ class Session{
         session_destroy();
         header("Location:loginAdmin");
     }
+
 }
 ?>

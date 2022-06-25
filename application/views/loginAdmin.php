@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,7 +11,7 @@
     
     <body>
         <?php
-            require_once ROOT . DS . 'application' . DS . 'models' . DS . 'AdminLogin.php'; 
+            include_once ROOT . DS . 'application' . DS . 'models' . DS . 'AdminLogin.php'; 
             $class = new AdminLogin();
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $adminUser = $_POST['adminUser'];
