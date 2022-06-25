@@ -1,5 +1,5 @@
 <?php
-    include_once ROOT . DS . 'library' . DS . 'Session.php';
+    require_once ROOT . DS . 'library' . DS . 'Session.php';
     Session::checkSession();
 ?>
 
@@ -15,11 +15,11 @@
 
 <body>
     <div class="topnav">
-        <a href="home">TRANG CHỦ</a>
+        <a href="homeAdmin">TRANG CHỦ</a>
         <div class="subnav">
             <button class="subnavbtn">SẢN PHẨM<i class="fa fa-caret-down"></i></button>
             <div class="subnav-content">
-                <a href="addproduct.php">Thêm sản phẩm</a>
+                <a href="addproduct">Thêm sản phẩm</a>
                 <a href="productlist.php">Danh sách sản phẩm</a>
             </div>
         </div> 
@@ -40,7 +40,7 @@
         <div class="subnav">
             <button class="subnavbtn">ĐƠN HÀNG<i class="fa fa-caret-down"></i></button>
             <div class="subnav-content">
-                <a href="inbox.php">Danh sách đơn hàng</a>
+                <a href="adminOrder">Danh sách đơn hàng</a>
             </div>
         </div> 
         <div class="subnav">
