@@ -12,7 +12,6 @@
 <body>     
     <?php
         require_once ROOT . DS . 'application' . DS . 'views' . DS . 'header.php';   
-        
         require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Product.php';
 
         if (!isset($_GET['productid']) || $_GET['productid'] == NULL) {
