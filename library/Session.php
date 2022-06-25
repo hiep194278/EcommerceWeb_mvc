@@ -12,6 +12,7 @@ class Session{
             }
         }
     }
+    
 
     public static function set($key, $val){
         $_SESSION[$key] = $val;
@@ -37,6 +38,13 @@ class Session{
         self::init();
         if (self::get("adminLogin") == true) {
             header("Location:home");
+        }
+    }
+    
+    public static function checkLoginAdmin(){
+        self::init();
+        if (self::get("adminLogin") == true) {
+            header("Location:homeAdmin");
         }
     }
 

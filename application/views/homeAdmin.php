@@ -12,7 +12,7 @@
 </head>
 <body>
     <?php
-        require_once ROOT . DS . 'application' . DS . 'views' . DS . 'headerAdmin.php';
+        include_once ROOT . DS . 'application' . DS . 'views' . DS . 'headerAdmin.php';
     ?>
 </body>
 </html>
