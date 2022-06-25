@@ -9,15 +9,14 @@
 </head>
 
 <body>     
-    <?php
-        require_once ROOT . DS . 'application' . DS . 'views' . DS . 'header.php'; 
+    <?php 
         global $project_path;
 
-        include ROOT . DS . 'library' . DS . 'Session.php';
+        require_once ROOT . DS . 'library' . DS . 'Session.php';
         Session::init();
 
         spl_autoload_register(function($class) {
-            include ROOT . DS . 'application' . DS . 'models' . DS . $class . '.php';
+            require_once ROOT . DS . 'application' . DS . 'models' . DS . $class . '.php';
         });
 
         $product = new Product;

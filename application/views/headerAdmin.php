@@ -1,6 +1,6 @@
 <?php
     require_once ROOT . DS . 'library' . DS . 'Session.php';
-     Session::checkSession();
+    Session::checkSession();
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@
 
 <body>
     <div class="topnav">
-        <a href="home">TRANG CHỦ</a>
+        <a href="homeAdmin">TRANG CHỦ</a>
         <div class="subnav">
             <button class="subnavbtn">SẢN PHẨM<i class="fa fa-caret-down"></i></button>
             <div class="subnav-content">
@@ -40,7 +40,7 @@
         <div class="subnav">
             <button class="subnavbtn">ĐƠN HÀNG<i class="fa fa-caret-down"></i></button>
             <div class="subnav-content">
-                <a href="inbox.php">Danh sách đơn hàng</a>
+                <a href="adminOrder">Danh sách đơn hàng</a>
             </div>
         </div> 
         <div class="subnav">

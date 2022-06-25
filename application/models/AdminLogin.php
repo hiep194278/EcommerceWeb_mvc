@@ -37,7 +37,7 @@
                     Session::set('adminID', $value['adminID']);
                     Session::set('adminUser', $value['adminUser']);
                     Session::set('adminName', $value['adminName']);
-                    header('Location:home');
+                    header('Location:homeAdmin');
                 } else {
                     $alert = "Tài khoản hoặc mật khẩu đã nhập không hợp lệ";
                     return $alert;
