@@ -1,6 +1,6 @@
 <?php
-    require_once ROOT . DS . 'library' . DS . 'Session.php';
-     Session::checkSession();
+    include_once ROOT . DS . 'library' . DS . 'Session.php';
+    Session::checkSession();
 ?>
 
 <!DOCTYPE html>
