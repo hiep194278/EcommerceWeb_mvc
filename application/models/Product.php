@@ -106,7 +106,7 @@
             $div = explode('.', $file_name);
             $file_ext = strtolower(end($div));
             $unique_image = substr(md5(time()), 0, 10) . '.' . $file_ext;
-            $uploaded_image = "uploads/" . $unique_image;
+            $uploaded_image = "public/uploads/" . $unique_image;
 
             if ($productName=="" || $brand=="" || $category=="" || $product_desc=="" || $price=="" || $featured=="") {
                 $alert = "<span style='color:red;'>Không được nhập danh mục trống</span>";

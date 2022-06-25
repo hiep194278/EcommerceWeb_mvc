@@ -29,7 +29,7 @@ class Session{
         self::init();
         if (self::get("adminLogin") == false) {
             self::destroy();
-            header("Location:login");
+            header("Location:loginAdmin");
         }
     }
 
@@ -43,6 +43,11 @@ class Session{
     public static function destroy(){
         session_destroy();
         header("Location:login");
+    }
+
+    public static function destroyAdmin(){
+        session_destroy();
+        header("Location:loginAdmin");
     }
 }
 ?>
