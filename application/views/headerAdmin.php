@@ -19,7 +19,7 @@
         <div class="subnav">
             <button class="subnavbtn">SẢN PHẨM<i class="fa fa-caret-down"></i></button>
             <div class="subnav-content">
-                <a href="addproduct.php">Thêm sản phẩm</a>
+                <a href="addproduct">Thêm sản phẩm</a>
                 <a href="productlist.php">Danh sách sản phẩm</a>
             </div>
         </div> 
