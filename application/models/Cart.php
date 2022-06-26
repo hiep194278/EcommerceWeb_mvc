@@ -163,7 +163,7 @@
         public function shifted($id, $time) {
             $id = mysqli_real_escape_string($this->db->link, $id);
             $time = mysqli_real_escape_string($this->db->link, $time);
-
+            $time = str_replace('x', ':', $time);
             $query = "UPDATE tbl_order SET orderStatus = '1' WHERE customerID='$id' AND orderDate='$time'";
             $result = $this->db->update($query);
 
@@ -179,9 +179,9 @@
         public function delete_shifted($id, $time) {
             $id = mysqli_real_escape_string($this->db->link, $id);
             $time = mysqli_real_escape_string($this->db->link, $time);
-
+            $time = str_replace('x', ':', $time);
             $query = "DELETE FROM tbl_order WHERE customerID='$id' AND orderDate='$time'";
-            $result = $this->db->update($query);
+            $result = $this->db->delete($query);
 
             if ($result) {
                 $alert = "<span style='color:green;'>Xóa thành công</span>";
