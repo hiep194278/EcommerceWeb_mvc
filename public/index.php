@@ -1,5 +1,5 @@
 <?php
-$project_path = 'EcommercialWeb';
+$project_path = 'EcommerceWeb_mvc';
 
 define('DS', DIRECTORY_SEPARATOR);
 define('ROOT', $_SERVER['DOCUMENT_ROOT'] . DS . $project_path);

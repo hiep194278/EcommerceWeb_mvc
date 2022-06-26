@@ -53,7 +53,7 @@
 </head>
 
 <body>
-    <form action="statisticrevenue.php" method="post">
+    <form action="revenueAdmin" method="post">
         Chọn thời gian: Từ
           <input type="date" name="from_date" id="from_date" value = 
               <?php

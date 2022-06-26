@@ -165,7 +165,7 @@
             <td><?php echo $result['catName'] ?></td>
             <td><?php echo $result['brandName'] ?></td>
             <td><?php echo number_format($result['price'], 0, ',', '.') ?>₫</td>
-            <td><img src="public/images/<?php echo $result['product_image'] ?>" height="120" width="140"></td>
+            <td><img src="public/uploads/<?php echo $result['product_image'] ?>" height="120" width="140"></td>
             <td><?php 
                 if ($result['featured'] == 1)
                     echo "Có";

@@ -30,7 +30,7 @@ class RouteController {
             || strcmp($controller,"addBrandAdmin") == 0
             || strcmp($controller,"addCategoryAdmin") == 0
             || strcmp($controller,"brandListAdmin") == 0
-            || strcmp($controller,"categoryListtAdmin") == 0
+            || strcmp($controller,"categoryListAdmin") == 0
             || strcmp($controller,"productListAdmin") == 0
             || strcmp($controller,"customerInformationAdmin") == 0
             || strcmp($controller,"editProductAdmin") == 0
@@ -57,6 +57,7 @@ class RouteController {
 
     function show() {
         $this->dispatch->render();
+
         if ($this->isAdmin == false) {
             $this->dispatch->footer();
         }
