@@ -25,7 +25,21 @@ class RouteController {
         // check if admin -> no footer
         if(strcmp($controller, "admin") == 0
             || strcmp($controller, "loginAdmin") == 0
-            || strcmp($controller, "homeAdmin") == 0){
+            || strcmp($controller, "homeAdmin") == 0
+            || strcmp($controller,"addProductAdmin") == 0
+            || strcmp($controller,"addBrandAdmin") == 0
+            || strcmp($controller,"addCategoryAdmin") == 0
+            || strcmp($controller,"brandListAdmin") == 0
+            || strcmp($controller,"categoryListtAdmin") == 0
+            || strcmp($controller,"productListAdmin") == 0
+            || strcmp($controller,"customerInformationAdmin") == 0
+            || strcmp($controller,"editProductAdmin") == 0
+            || strcmp($controller,"editBrandAdmin") == 0
+            || strcmp($controller,"editCategoryAdmin") == 0
+            || strcmp($controller,"orderAdmin") == 0
+            || strcmp($controller,"orderDetailsAdmin") == 0
+            || strcmp($controller,"revenueAdmin") == 0
+            || strcmp($controller,"productDetailsAdmin") == 0){
             $this->isAdmin = true;
         }
 

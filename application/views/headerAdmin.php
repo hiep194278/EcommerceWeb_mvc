@@ -19,34 +19,34 @@
         <div class="subnav">
             <button class="subnavbtn">SẢN PHẨM<i class="fa fa-caret-down"></i></button>
             <div class="subnav-content">
-                <a href="addproduct">Thêm sản phẩm</a>
-                <a href="productlist.php">Danh sách sản phẩm</a>
+                <a href="addProductAdmin">Thêm sản phẩm</a>
+                <a href="productListAdmin">Danh sách sản phẩm</a>
             </div>
         </div> 
         <div class="subnav">
             <button class="subnavbtn">DANH MỤC<i class="fa fa-caret-down"></i></button>
             <div class="subnav-content">
-                <a href="addcat.php">Thêm danh mục</a>
-                <a href="catlist.php">Danh sách danh mục</a>
+                <a href="addCategoryAdmin">Thêm danh mục</a>
+                <a href="categoryListAdmin">Danh sách danh mục</a>
             </div>
         </div> 
         <div class="subnav">
             <button class="subnavbtn">THƯƠNG HIỆU<i class="fa fa-caret-down"></i></button>
             <div class="subnav-content">
-                <a href="addbrand.php">Thêm thương hiệu</a>
-                <a href="brandlist.php">Danh sách thương hiệu</a>
+                <a href="addBrandAdmin">Thêm thương hiệu</a>
+                <a href="brandListAdmin">Danh sách thương hiệu</a>
             </div>
         </div> 
         <div class="subnav">
             <button class="subnavbtn">ĐƠN HÀNG<i class="fa fa-caret-down"></i></button>
             <div class="subnav-content">
-                <a href="adminOrder">Danh sách đơn hàng</a>
+                <a href="orderAdmin">Danh sách đơn hàng</a>
             </div>
         </div> 
         <div class="subnav">
             <button class="subnavbtn">THỐNG KÊ DOANH THU<i class="fa fa-caret-down"></i></button>
             <div class="subnav-content">
-                <a href="statisticrevenue.php">DOANH THU</a>
+                <a href="revenueAdmin">DOANH THU</a>
             </div>
         </div>         
         <div class="user-menu">
