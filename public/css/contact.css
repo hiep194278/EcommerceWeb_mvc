@@ -1,0 +1,29 @@
+.header{
+    text-align: center;
+}
+
+.paragraph{
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.contact-card-line{
+    border: white;
+    padding: 0;
+    width: 80%;
+    list-style-type: none;
+    columns: 2;
+    margin: auto;
+}
+
+.contact-card-box{
+    width: 95%;
+    border: 1px solid black;
+    padding-left: 30px;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+.header-box{
+    text-align: left;
+}
