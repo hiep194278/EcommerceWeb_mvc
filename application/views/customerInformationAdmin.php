@@ -1,10 +1,7 @@
 <?php
-    include_once ROOT . DS . 'application' . DS . 'views' . DS . 'headerAdmin.php';
-    include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Customer.php';
-    Session::checkSession()
-?>
+    require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Customer.php';
+    Session::checkSession();
 
-<?php
     $customer = new Customer();
     if (!isset($_GET['customerid']) || $_GET['customerid'] == NULL) {
         echo "<script>window.location = 'homeAdmin'</script>";

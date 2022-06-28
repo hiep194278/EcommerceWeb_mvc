@@ -1,6 +1,6 @@
 <?php
-    include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Product.php';
-    include_once ROOT . DS . 'application' . DS . 'views' . DS . 'headerAdmin.php';
+    require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Product.php';
+    
     if (!isset($_GET['productid']) || $_GET['productid'] == NULL) {
         echo "<script>windows.location = 'revenueAdmin'</script>";
     } else {

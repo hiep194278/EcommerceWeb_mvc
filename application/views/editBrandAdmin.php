@@ -1,5 +1,4 @@
 <?php
-    include_once ROOT . DS . 'application' . DS . 'views' . DS . 'headerAdmin.php';
     include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Brand.php';
 ?>
 <?php

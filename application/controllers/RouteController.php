@@ -4,6 +4,7 @@ class RouteController {
     private $url;
     private $dispatch;
     private $isAdmin = false;
+    private $isLoginAdmin = false;
 
     function __construct($url) {
         $this->url = $url;
@@ -21,6 +22,9 @@ class RouteController {
         $urlArray = explode("/", $this->url);
         $controller = $urlArray[0]; array_shift($urlArray);
 
+        if (strcmp($controller, "loginAdmin") == 0) {
+            $this->isLoginAdmin = true;
+        }
 
         // check if admin -> no footer
         if(strcmp($controller, "admin") == 0
@@ -56,6 +60,13 @@ class RouteController {
     }
 
     function show() {
+        if ($this->isAdmin == false) {
+            $this->dispatch->header();
+        } else {
+            if ($this->isLoginAdmin == false)
+                $this->dispatch->adminHeader();
+        }
+
         $this->dispatch->render();
 
         if ($this->isAdmin == false) {

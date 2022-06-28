@@ -19,10 +19,7 @@
 </head>
 
 <body>
-    <?php
-        include_once ROOT . DS . 'application' . DS . 'views' . DS . 'headerAdmin.php';
-    ?>   
-    
+
     <br><br>
     <form style="border: 3px solid #f1f1f1;width: 30%;margin-left: 35%;" action="addBrandAdmin" method="POST">
         <div class="container">

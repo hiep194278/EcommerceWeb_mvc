@@ -20,11 +20,11 @@
         });
 
         $product = new Product;
-        $cart = new Cart();
-        $cat = new Category();
-        $product = new Product();
-        $customer = new Customer();
-        $brand = new Brand();
+        $cart = new Cart;
+        $cat = new Category;
+        $product = new Product;
+        $customer = new Customer;
+        $brand = new Brand;
     ?>
 
     <div class="topnav">

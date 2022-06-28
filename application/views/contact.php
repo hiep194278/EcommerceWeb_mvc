@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="css/contact.css" />
   </head>
 
-  <body>
-    <?php require_once ROOT . DS . 'application' . DS . 'views' . DS . 'header.php'; ?>
- 
+  <body> 
     <br />
 
     <h1 class="header">THÔNG TIN LIÊN HỆ ECOMMERCE</h1>

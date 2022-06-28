@@ -1,9 +1,8 @@
 <?php
-    include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Brand.php'; 
-    include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Category.php';
-    include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Product.php';
-    include_once ROOT . DS . 'application' . DS . 'views' . DS . 'headerAdmin.php';
-    include_once ROOT . DS . 'helpers' . DS . 'Format.php';
+    require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Brand.php'; 
+    require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Category.php';
+    require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Product.php';
+    require_once ROOT . DS . 'helpers' . DS . 'Format.php';
 ?>
 
 <?php

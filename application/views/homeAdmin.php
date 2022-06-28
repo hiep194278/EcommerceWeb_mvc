@@ -7,8 +7,6 @@
     <title>Quản trị viên</title>
 </head>
 <body>
-    <?php
-        include_once ROOT . DS . 'application' . DS . 'views' . DS . 'headerAdmin.php';
-    ?>
+
 </body>
 </html>

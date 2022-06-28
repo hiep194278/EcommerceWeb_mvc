@@ -9,7 +9,8 @@
 </head>
 <body>
     <?php 
-        require_once ROOT . DS . 'application' . DS . 'views' . DS . 'header.php';  
+        require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Product.php';
+        $product = new Product;  
 
         if (isset($_GET['productid'])) {
             $productID = $_GET['productid'];

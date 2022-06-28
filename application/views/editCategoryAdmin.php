@@ -1,6 +1,5 @@
 <?php
-    include_once ROOT . DS . 'application' . DS . 'views' . DS . 'headerAdmin.php';
-    include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Category.php';
+    require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Category.php';
 ?>
 <?php
     $cat = new Category();

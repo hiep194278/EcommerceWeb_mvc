@@ -1,14 +1,13 @@
 <?php
-    include_once ROOT . DS . 'application' . DS . 'views' . DS . 'headerAdmin.php';
-    include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Brand.php';
-?>
-<?php
+    require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Brand.php';
+
     $brand = new Brand();
     if (isset($_GET['delID'])) {
         $id = $_GET['delID'];
         $delBrand = $brand->delete_brand($id);
     }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

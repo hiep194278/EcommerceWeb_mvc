@@ -1,7 +1,7 @@
 <?php
-    include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Brand.php'; 
-    include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Category.php';
-    include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Product.php';
+    require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Brand.php'; 
+    require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Category.php';
+    require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Product.php';
 ?>
 <?php
     $product = new Product();
@@ -46,9 +46,6 @@
     </style>
 </head>
 <body>
-    <?php
-        include_once ROOT . DS . 'application' . DS . 'views' . DS . 'headerAdmin.php';
-    ?>       
 
     <?php
         $get_product_by_id = $product->getproductbyID($id); 

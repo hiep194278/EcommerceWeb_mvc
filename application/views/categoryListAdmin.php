@@ -1,9 +1,7 @@
 <?php
-    include_once ROOT . DS . 'application' . DS . 'views' . DS . 'headerAdmin.php';
-    include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Category.php';
-?>
-<?php
+    require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Category.php';
     $cat = new Category();
+    
     if (isset($_GET['delID'])) {
         $id = $_GET['delID'];
         $delCat = $cat->delete_category($id);

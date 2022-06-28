@@ -1,7 +1,7 @@
 <?php
-    include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Brand.php'; 
-    include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Category.php';
-    include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Product.php';
+    require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Brand.php'; 
+    require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Category.php';
+    require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Product.php';
 ?>
 <?php
     $product = new Product();
@@ -40,9 +40,6 @@
     </style>
 </head>
 <body>
-    <?php
-        include_once ROOT . DS . 'application' . DS . 'views' . DS . 'headerAdmin.php';
-    ?>       
 
     <form action="addProductAdmin" method='POST' enctype="multipart/form-data" style='width:30%;margin-left: 35%;'>
         <?php

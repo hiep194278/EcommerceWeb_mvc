@@ -17,7 +17,8 @@
 </head>
 <body>
     <?php 
-        require_once ROOT . DS . 'application' . DS . 'views' . DS . 'header.php';  
+        require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Cart.php';
+        $cart = new Cart;  
       
         if (isset($_GET['delID'])) {
             $cartID = $_GET['delID'];

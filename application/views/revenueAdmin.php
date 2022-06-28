@@ -1,13 +1,12 @@
 <?php
-    include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Brand.php'; 
-    include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Customer.php';
-    include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Product.php';
-    include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Cart.php';
-    include_once ROOT . DS . 'application' . DS . 'views' . DS . 'headerAdmin.php';
+    require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Brand.php'; 
+    require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Customer.php';
+    require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Product.php';
+    require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Cart.php';
 ?>
 <?php
     $filepath = realpath(dirname(__FILE__));
-    include_once ($filepath . '/../models/Cart.php');
+    require_once ($filepath . '/../models/Cart.php');
 ?>
 <?php
     $get_order_period = null;

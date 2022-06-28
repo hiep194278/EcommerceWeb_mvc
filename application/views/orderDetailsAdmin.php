@@ -1,6 +1,5 @@
 <?php
-    include_once ROOT . DS . 'application' . DS . 'views' . DS . 'headerAdmin.php';
-    include_once ROOT . DS . 'application' . DS . 'models' . DS . 'Cart.php';
+    require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Cart.php';
 ?>
 <?php
     $ct = new Cart();
