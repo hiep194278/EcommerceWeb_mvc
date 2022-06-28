@@ -15,7 +15,6 @@
 
 <body>
     <div class="topnav">
-        <a href="homeAdmin">TRANG CHỦ</a>
         <div class="subnav">
             <button class="subnavbtn">SẢN PHẨM<i class="fa fa-caret-down"></i></button>
             <div class="subnav-content">

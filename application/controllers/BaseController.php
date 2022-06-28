@@ -5,7 +5,7 @@ class BaseController {
     }
 
     public function adminHeader() {
-        include ROOT . DS . 'application' . DS . 'views' . DS . 'headerAdmin.php'; 
+        include ROOT . DS . 'application' . DS . 'views' . DS . 'admin' . DS . 'headerAdmin.php'; 
     }
 
     public function footer() {

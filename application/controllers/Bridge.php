@@ -1,6 +1,6 @@
 <?php
 
-class RouteController {
+class Bridge {
     private $url;
     private $dispatch;
     private $isAdmin = false;
@@ -26,7 +26,6 @@ class RouteController {
             $this->isLoginAdmin = true;
         }
 
-        // check if admin -> no footer
         if(strcmp($controller, "admin") == 0
             || strcmp($controller, "loginAdmin") == 0
             || strcmp($controller, "homeAdmin") == 0
@@ -47,14 +46,16 @@ class RouteController {
             $this->isAdmin = true;
         }
 
-        // if link is account-management => controller of link is AccountManagementController
         $controller = str_replace('-', ' ', $controller);
         $controller = ucwords($controller);
         $controller = str_replace(' ', '', $controller);
-        $controller .= "Controller"; // example : AboutController, ContactController,...
+        $controller .= "Controller"; 
 
-        // include controller
-        require_once ROOT . DS . 'application' . DS . 'controllers' . DS . $controller . '.php';
+        if ($this->isAdmin == false)
+            require_once ROOT . DS . 'application' . DS . 'controllers' . DS . $controller . '.php';
+        else 
+            require_once ROOT . DS . 'application' . DS . 'controllers' . DS . 'admin' . DS . $controller . '.php';
+
         $this->dispatch = new $controller();
 
     }

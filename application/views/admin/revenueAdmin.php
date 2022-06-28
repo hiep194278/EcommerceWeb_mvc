@@ -4,10 +4,7 @@
     require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Product.php';
     require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Cart.php';
 ?>
-<?php
-    $filepath = realpath(dirname(__FILE__));
-    require_once ($filepath . '/../models/Cart.php');
-?>
+
 <?php
     $get_order_period = null;
     $from_date = null;
