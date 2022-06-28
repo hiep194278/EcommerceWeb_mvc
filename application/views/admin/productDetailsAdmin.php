@@ -31,7 +31,7 @@
     <main class="container">
         <div class="left-column">
             <img
-                src="admin/uploads/<?php echo $result_details['product_image']; ?>"
+                src="public/uploads/<?php echo $result_details['product_image']; ?>"
             />
         </div>
 

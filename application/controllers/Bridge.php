@@ -26,29 +26,29 @@ class Bridge {
             $this->isLoginAdmin = true;
         }
 
-        if(strcmp($controller, "admin") == 0
-            || strcmp($controller, "loginAdmin") == 0
-            || strcmp($controller, "homeAdmin") == 0
-            || strcmp($controller,"addProductAdmin") == 0
-            || strcmp($controller,"addBrandAdmin") == 0
-            || strcmp($controller,"addCategoryAdmin") == 0
-            || strcmp($controller,"brandListAdmin") == 0
-            || strcmp($controller,"categoryListAdmin") == 0
-            || strcmp($controller,"productListAdmin") == 0
-            || strcmp($controller,"customerInformationAdmin") == 0
-            || strcmp($controller,"editProductAdmin") == 0
-            || strcmp($controller,"editBrandAdmin") == 0
-            || strcmp($controller,"editCategoryAdmin") == 0
-            || strcmp($controller,"orderAdmin") == 0
-            || strcmp($controller,"orderDetailsAdmin") == 0
-            || strcmp($controller,"revenueAdmin") == 0
-            || strcmp($controller,"productDetailsAdmin") == 0){
+        if ( strcmp($controller, "admin") == 0 || 
+             strcmp($controller, "loginAdmin") == 0 || 
+             strcmp($controller, "homeAdmin") == 0 || 
+             strcmp($controller,"addProductAdmin") == 0 || 
+             strcmp($controller,"addBrandAdmin") == 0 || 
+             strcmp($controller,"addCategoryAdmin") == 0 || 
+             strcmp($controller,"brandListAdmin") == 0 || 
+             strcmp($controller,"categoryListAdmin") == 0 || 
+             strcmp($controller,"productListAdmin") == 0 || 
+             strcmp($controller,"customerListAdmin") == 0 || 
+             strcmp($controller,"customerInformationAdmin") == 0 ||
+             strcmp($controller,"editProductAdmin") == 0 || 
+             strcmp($controller,"editBrandAdmin") == 0 || 
+             strcmp($controller,"editCategoryAdmin") == 0 || 
+             strcmp($controller,"orderAdmin") == 0 || 
+             strcmp($controller,"orderDetailsAdmin") == 0 || 
+             strcmp($controller,"revenueAdmin") == 0 || 
+             strcmp($controller,"productDetailsAdmin") == 0)
+        {
             $this->isAdmin = true;
         }
 
-        $controller = str_replace('-', ' ', $controller);
         $controller = ucwords($controller);
-        $controller = str_replace(' ', '', $controller);
         $controller .= "Controller"; 
 
         if ($this->isAdmin == false)

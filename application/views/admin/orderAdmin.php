@@ -21,11 +21,11 @@
         $del_result = $cart->delete_shifted($id, $time);
     }
     
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $from_date = $_POST['from_date'];
-            $to_date = $_POST['to_date'];
-            $get_order_period = $cart->get_order_cart_period($from_date, $to_date);
-        }
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $from_date = $_POST['from_date'];
+        $to_date = $_POST['to_date'];
+        $get_order_period = $cart->get_order_cart_period($from_date, $to_date);
+    }
 ?>
 
 <!DOCTYPE html>

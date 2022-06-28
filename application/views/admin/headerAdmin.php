@@ -35,7 +35,13 @@
                 <a href="addBrandAdmin">Thêm thương hiệu</a>
                 <a href="brandListAdmin">Danh sách thương hiệu</a>
             </div>
-        </div> 
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">KHÁCH HÀNG<i class="fa fa-caret-down"></i></button>
+            <div class="subnav-content">
+                <a href="customerListAdmin">Danh sách khách hàng</a>
+            </div>
+        </div>  
         <div class="subnav">
             <button class="subnavbtn">ĐƠN HÀNG<i class="fa fa-caret-down"></i></button>
             <div class="subnav-content">
