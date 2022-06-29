@@ -15,16 +15,6 @@
         require_once ROOT . DS . 'library' . DS . 'Session.php';
         Session::init();
 
-        spl_autoload_register(function($class) {
-            require_once ROOT . DS . 'application' . DS . 'models' . DS . $class . '.php';
-        });
-
-        $product = new Product;
-        $cart = new Cart;
-        $cat = new Category;
-        $product = new Product;
-        $customer = new Customer;
-        $brand = new Brand;
     ?>
 
     <div class="topnav">

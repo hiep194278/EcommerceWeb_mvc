@@ -1,10 +1,10 @@
 <?php
     require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Cart.php';
-?>
-<?php
     $ct = new Cart();
+
     $customerID = null;
     $orderdate = null;
+    
     if (isset($_GET['customerid'])) {
         $customerID = $_GET['customerid'];
             if ( isset($_GET['timeorder']) ) {
