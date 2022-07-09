@@ -11,15 +11,19 @@
     <div class="slideshow-container">
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade" style="text-align: center">
-        <img src="images/slide/img1.jpg" style="width: 75%" />
+        <img src="images/slide/slide1.jpg" style="width: 68%" />
         </div>
 
         <div class="mySlides fade" style="text-align: center">
-        <img src="images/slide/img2.jpg" style="width: 75%" />
+        <img src="images/slide/slide2.jpg" style="width: 65%" />
         </div>
 
         <div class="mySlides fade" style="text-align: center">
-        <img src="images/slide/img3.jpg" style="width: 75%" />
+        <img src="images/slide/slide3.jpg" style="width: 64.2%" />
+        </div>
+
+        <div class="mySlides fade" style="text-align: center">
+        <img src="images/slide/slide4.jpg" style="width: 64.6%" />
         </div>
 
         <!-- Next and previous buttons -->
@@ -32,6 +36,7 @@
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
     </div>
 </body>
 <script src="js/slider.js"></script>
