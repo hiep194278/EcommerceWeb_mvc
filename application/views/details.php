@@ -23,10 +23,6 @@
         }
     
         $customerID = Session::get('customer_id');
-        if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['compare'])) {
-            $productID = $_POST['productid'];
-            $insertCompare = $product->insert_compare($productID, $customerID);
-        }
     
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['wishlist'])) {
             $productID = $_POST['productid'];

@@ -26,7 +26,6 @@
             if (isset($_GET['customerid'])) {
                 $customerID = $_GET['customerid'];
                 $delCart = $cart->del_cart_data();
-                $delCompare = $cart->del_compare($customerID);
                 Session::destroy();
             }
 
