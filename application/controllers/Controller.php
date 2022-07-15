@@ -1,6 +1,6 @@
 <?php
 
 interface Controller {
-    //Render HTML view 
+    //Show view 
     function render();
 }

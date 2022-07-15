@@ -197,44 +197,6 @@
             return $result;
         }
 
-        public function insert_compare($productID, $customerID) {
-            $productID = mysqli_real_escape_string($this->db->link, $productID);
-            $customerID = mysqli_real_escape_string($this->db->link, $customerID);
-
-            $checkDuplicate = "SELECT * FROM tbl_compare WHERE productID = '$productID' AND customerID = '$customerID'";
-            $result = $this->db->select($checkDuplicate);
-            if ($result) {
-                $alert = "<span style='color:red;'>Đã được thêm vào phần so sánh</span>";
-                return $alert;
-            }
-
-
-            $query = "SELECT * FROM tbl_product WHERE productID = '$productID'";
-            $result = $this->db->select($query)->fetch_assoc();
-
-            $productName = $result['productName'];
-            $price = $result['price'];
-            $productImage = $result['product_image'];
-
-            $query = "INSERT INTO tbl_compare(productID, price, compareImage, customerID, productName)
-                      VALUES ('$productID', '$price', '$productImage', '$customerID', '$productName')";
-            $result = $this->db->insert($query);
-
-            if ($result) {
-                $alert = "<span style='color:green;'>Thêm vào phần so sánh thành công</span>";
-            } else {
-                $alert = "<span style='color:red;'>Thêm thất bại</span>";
-            }
-
-            return $alert;
-        }
-
-        public function get_compare($customerID) {
-            $query = "SELECT * FROM tbl_compare WHERE customerID = '$customerID' order by productID desc";
-            $result = $this->db->select($query);
-            return $result;
-        }
-
         public function insert_wishlist($productID, $customerID) {
             $productID = mysqli_real_escape_string($this->db->link, $productID);
             $customerID = mysqli_real_escape_string($this->db->link, $customerID);

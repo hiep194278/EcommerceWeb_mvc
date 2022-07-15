@@ -1,4 +1,5 @@
 <?php
+
 $project_path = 'EcommerceWeb_mvc';
 
 define('DS', DIRECTORY_SEPARATOR);

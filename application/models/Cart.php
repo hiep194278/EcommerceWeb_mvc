@@ -207,14 +207,6 @@
 
             return $alert;            
         }
-
-        public function del_compare($customerID) {
-            $sessionID = session_id();
-            $query = "DELETE FROM tbl_compare WHERE customerID = '$customerID'";
-            $result = $this->db->delete($query);
-
-            return $result;
-        }
         
         public function get_detail_bill($customerID, $timeorder)
         {

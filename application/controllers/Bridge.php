@@ -8,11 +8,12 @@ class Bridge {
 
     function __construct($url) {
         $this->url = $url;
-
         self::process_URL();
     }
 
+    //Handle URL
     function process_URL() {
+        //Home
         if(strcmp($this->url, "/") == 0){
             require_once ROOT . DS . 'application' . DS . 'controllers' . DS . 'HomeController.php';
             $this->dispatch = new HomeController();
@@ -26,6 +27,7 @@ class Bridge {
             $this->isLoginAdmin = true;
         }
 
+        //Admin controller
         if ( strcmp($controller, "admin") == 0 || 
              strcmp($controller, "loginAdmin") == 0 || 
              strcmp($controller, "homeAdmin") == 0 || 
@@ -43,7 +45,7 @@ class Bridge {
              strcmp($controller, "orderAdmin") == 0 || 
              strcmp($controller, "orderDetailsAdmin") == 0 || 
              strcmp($controller, "revenueAdmin") == 0 || 
-             strcmp($controller, "productDetailsAdmin") == 0)
+             strcmp($controller, "productDetailsAdmin") == 0 )
         {
             $this->isAdmin = true;
         }
@@ -57,10 +59,10 @@ class Bridge {
             require_once ROOT . DS . 'application' . DS . 'controllers' . DS . 'admin' . DS . $controller . '.php';
 
         $this->dispatch = new $controller();
-
     }
 
     function show() {
+        //Show header
         if ($this->isAdmin == false) {
             $this->dispatch->header();
         } else {
@@ -68,8 +70,10 @@ class Bridge {
                 $this->dispatch->adminHeader();
         }
 
+        //Show body
         $this->dispatch->render();
 
+        //Show footer
         if ($this->isAdmin == false) {
             $this->dispatch->footer();
         }
