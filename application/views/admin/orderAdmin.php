@@ -116,9 +116,11 @@
         <tr>
             <td><?php echo $i; ?></td>
             <td><?php echo $result['orderDate'] ?></td>
-            <td><a href="orderDetailsAdmin&customerid=<?php echo $result['customerID'] ?>&timeorder=
-                <?php echo str_replace(':', 'x', $result['orderDate']); ?>
-            ">Hiện thông tin</a></td>
+            <td>
+                <a href="orderDetailsAdmin&customerid=<?php echo $result['customerID'] ?>&timeorder=<?php echo str_replace(':', 'x', $result['orderDate']);?>">
+                    Hiện thông tin
+                </a>
+            </td>
             <td><?php echo $result['customerID'] ?></td>
             <td><a><?php
                         $cus = new Customer();
