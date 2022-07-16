@@ -79,9 +79,11 @@
             echo $del_result;
         }
     ?>
+
     <table>
         <tr>
             <th>Số thứ tự</th>
+            <th>Thời điểm</th>
             <th>Tên Mặt Hàng</th>
             <th>Thông tin mặt hàng</th>
             <th>Giá</th>
@@ -97,8 +99,9 @@
                 $get_product_name = $cart->get_all_sold_product();
             }
             else {
-            $get_product_name = $cart->get_all_sold_product_with_period($from_date, $to_date);
+                $get_product_name = $cart->get_all_sold_product_with_period($from_date, $to_date);
             }
+
             if ($get_product_name) {
                 $i = 0;
                 while ($result = $get_product_name->fetch_assoc()) {
@@ -106,6 +109,7 @@
         ?> 
         <tr>
             <td><?php echo $i; ?></td>
+            <td><?php echo $result['orderDate'] ?></td>
             <td><?php echo $result['productName'] ?></td>
             <td><a href="productDetailsAdmin&productid=<?php echo $result['productID'] ?>">Hiện thông tin</a></td>
             <td><?php
@@ -113,27 +117,17 @@
                     $product_detail = $product->getproductbyID($result['productID']);
                     $result_detail = $product_detail->fetch_assoc();
                     $price= $result_detail['price'];
-                    echo $price;
+                    echo number_format($price, 0, ',', '.');
                 ?><a>₫</a></td>
             <td><?php
-                        if($from_date ==  null)
-                        {
-                            $product_count = $cart->get_count_sold_product($result['productID']);
-                        }
-                        else
-                        {
-                            $product_count = $cart->get_count_sold_product_with_period($result['productID'], $from_date, $to_date);
-                        }
-                        $result_count = $product_count->fetch_assoc();
-                        $count= $result_count['cnt'];
-                        echo $count;
-                    ?>  
+                    $count = $result['quantity'];
+                    echo $count;    
+                ?>  
             <td>
                 <?php
                     $total_price += $count*$price;
-                    echo $count*$price
-                ?>
-                <a>₫</a>
+                    echo number_format($count*$price, 0, ',', '.');
+                ?><a>₫</a>
             </td>
 
         </tr>
@@ -144,7 +138,7 @@
     </table>
     <h1 style ="text-align: right">TOTAL REVENUE = 
         <?php
-            echo $total_price
+            echo number_format($total_price, 0, ',', '.');
         ?><a>₫</a>
     </h1>
 </body>
