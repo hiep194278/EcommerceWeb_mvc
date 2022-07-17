@@ -14,8 +14,7 @@
 
         require_once ROOT . DS . 'library' . DS . 'Session.php';
         Session::init();
-        require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Cart.php';
-        $cart = new Cart;
+
     ?>
 
     <div class="topnav">

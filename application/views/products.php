@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="public/css/card.css" />   
     <link rel="stylesheet" href="public/css/search.css" />  
 </head>
-<body>
-<div style='min-height: 50%;'> 
+<body> 
     <?php 
         require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Product.php';
         require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Category.php';
@@ -110,6 +109,6 @@
             }
         }
     ?>
-</div>
+
 </body>
 </html>

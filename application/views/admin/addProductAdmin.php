@@ -90,6 +90,7 @@
 
         <label>Sản phẩm nổi bật</label>
         <select id="select" name="featured">
+            <option>Nổi bật</option>
             <option value='1'>Có</option>
             <option value='0'>Không</option>
         </select>

@@ -26,7 +26,6 @@
 </head>
 
 <body>
-<div style='min-height: 50%;'>
     <?php
         require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Cart.php';
         $cart = new Cart;
@@ -109,6 +108,6 @@
         </table>
 
     </form>
-    </div>
+    
 </body>
 </html>

@@ -10,7 +10,6 @@
 </head>
 
 <body>     
-    <div style='min-height: 50%;'>
     <?php
         require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Product.php';
         require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Cart.php';
@@ -100,6 +99,5 @@
             }
         }
     ?>     
-    </div>
 </body>
 </html>
