@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="public/css/login.css" />
 </head>
 <body>
+<div style='min-height: 50%;'>
     <?php 
         require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Cart.php';
         $cart = new Cart;  
@@ -56,5 +57,6 @@
             }
         }
     ?>
+    </div>
 </body>
 </html>
