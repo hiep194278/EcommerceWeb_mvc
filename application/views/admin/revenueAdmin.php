@@ -83,7 +83,6 @@
     <table>
         <tr>
             <th>Số thứ tự</th>
-            <th>Thời điểm</th>
             <th>Tên Mặt Hàng</th>
             <th>Thông tin mặt hàng</th>
             <th>Giá</th>
@@ -109,7 +108,6 @@
         ?> 
         <tr>
             <td><?php echo $i; ?></td>
-            <td><?php echo $result['orderDate'] ?></td>
             <td><?php echo $result['productName'] ?></td>
             <td><a href="productDetailsAdmin&productid=<?php echo $result['productID'] ?>">Hiện thông tin</a></td>
             <td><?php
@@ -120,8 +118,17 @@
                     echo number_format($price, 0, ',', '.');
                 ?><a>₫</a></td>
             <td><?php
-                    $count = $result['quantity'];
-                    echo $count;    
+                        if($from_date ==  null)
+                        {
+                            $product_count = $cart->get_count_sold_product($result['productID']);
+                        }
+                        else
+                        {
+                            $product_count = $cart->get_count_sold_product_with_period($result['productID'], $from_date, $to_date);
+                        }
+                        $result_count = $product_count->fetch_assoc();
+                        $count= $result_count['cnt'];
+                        echo $count; 
                 ?>  
             <td>
                 <?php
