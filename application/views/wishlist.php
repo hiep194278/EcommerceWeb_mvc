@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="public/css/cart.css" />
 </head>
 <body>
+<div style='min-height:50%'>
     <?php 
         require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Product.php';
         $product = new Product;  
@@ -53,6 +54,6 @@
             }
         ?>
     </table>
-
+    </div>
 </body>
 </html>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="public/css/login.css">
 </head>
 <body>
+<div style='min-height:50%'>
     <?php
         $login_check = Session::get('customer_login');
         if ($login_check) {
@@ -69,5 +70,6 @@
             <input type="submit" name="submit" value="Đăng ký"/>
         </div>
     </form>
+    </div>
 </body>
 </html>

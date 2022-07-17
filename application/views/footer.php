@@ -23,9 +23,7 @@
             <h6>Liên hệ</h6>
             <ul class="footer-links">
               <li>SDT: 096 411 0606</a></li>
-              <li>Facebook: <a href="(link)">link</a></li>
               <li>Email: ecommerce@gmail.com</li>
-              <li>Zalo: <a href="(link)">link</a></li>
               </br>
               <li style="font-size: 20px"><a href="contact">Xem thêm</a></li>
             </ul>

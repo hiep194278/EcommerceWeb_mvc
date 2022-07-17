@@ -13,6 +13,7 @@
   </head>
 
   <body> 
+  <div style='min-height:50%'>
     <?php
       require_once ROOT . DS . 'application' . DS . 'views' . DS . 'slider.php';
     ?>
@@ -81,5 +82,6 @@
         }
       ?>
     </div> 
+    </div>
   </body>
 </html>
