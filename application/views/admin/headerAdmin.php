@@ -40,7 +40,7 @@
         <a href="orderAdmin">ĐƠN HÀNG</a>  
         <a href="revenueAdmin">DOANH THU</a> 
         <div class="user-menu">
-            <a href="account.html">
+            <a>
             ADMIN <?php echo Session::get('adminName') ?>
             </a>
             
