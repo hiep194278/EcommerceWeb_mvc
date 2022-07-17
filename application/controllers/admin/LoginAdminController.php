@@ -4,6 +4,6 @@ require_once ROOT . DS . 'application' . DS . 'controllers' . DS . 'BaseControll
 
 class LoginAdminController extends BaseController implements Controller{
     public function render() {
-        include ROOT . DS . 'application' . DS . 'views' . DS . 'loginAdmin.php';
+        require_once ROOT . DS . 'application' . DS . 'views' . DS . 'admin' . DS . 'loginAdmin.php';
     }
 }

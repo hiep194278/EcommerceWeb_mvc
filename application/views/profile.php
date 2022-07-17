@@ -9,7 +9,8 @@
 </head>
 <body>
     <?php 
-        require_once ROOT . DS . 'application' . DS . 'views' . DS . 'header.php';  
+        require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Cart.php';
+        $cart = new Cart;  
 
         $login_check = Session::get('customer_login');
         if ($login_check == false) {

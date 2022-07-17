@@ -14,17 +14,8 @@
 
         require_once ROOT . DS . 'library' . DS . 'Session.php';
         Session::init();
-
-        spl_autoload_register(function($class) {
-            require_once ROOT . DS . 'application' . DS . 'models' . DS . $class . '.php';
-        });
-
-        $product = new Product;
-        $cart = new Cart();
-        $cat = new Category();
-        $product = new Product();
-        $customer = new Customer();
-        $brand = new Brand();
+        require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Cart.php';
+        $cart = new Cart;
     ?>
 
     <div class="topnav">
@@ -36,7 +27,6 @@
             if (isset($_GET['customerid'])) {
                 $customerID = $_GET['customerid'];
                 $delCart = $cart->del_cart_data();
-                $delCompare = $cart->del_compare($customerID);
                 Session::destroy();
             }
 

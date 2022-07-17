@@ -11,8 +11,10 @@
 
 <body>     
     <?php
-        require_once ROOT . DS . 'application' . DS . 'views' . DS . 'header.php';   
         require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Product.php';
+        require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Cart.php';
+        $product = new Product;
+        $cart = new Cart;
 
         if (!isset($_GET['productid']) || $_GET['productid'] == NULL) {
             echo "<script>windows.location = 'home'</script>";
@@ -21,10 +23,6 @@
         }
     
         $customerID = Session::get('customer_id');
-        if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['compare'])) {
-            $productID = $_POST['productid'];
-            $insertCompare = $product->insert_compare($productID, $customerID);
-        }
     
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['wishlist'])) {
             $productID = $_POST['productid'];

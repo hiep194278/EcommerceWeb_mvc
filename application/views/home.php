@@ -14,7 +14,6 @@
 
   <body> 
     <?php
-      require_once ROOT . DS . 'application' . DS . 'views' . DS . 'header.php'; 
       require_once ROOT . DS . 'application' . DS . 'views' . DS . 'slider.php';
     ?>
     <br />

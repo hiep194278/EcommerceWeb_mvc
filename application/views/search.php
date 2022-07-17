@@ -10,7 +10,12 @@
 </head>
 <body>
     <?php 
-        require_once ROOT . DS . 'application' . DS . 'views' . DS . 'header.php'; 
+        require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Product.php';
+        require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Category.php';
+        require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Brand.php';
+        $product = new Product; 
+        $cat = new Category;
+        $brand = new Brand;
         
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $keyword = $_POST['keyword'];

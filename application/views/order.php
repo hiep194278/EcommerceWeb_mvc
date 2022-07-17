@@ -5,16 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order</title>
-<<<<<<< HEAD
     <link rel="stylesheet" href="public/css/cart.css" /> 
-=======
-    <link rel="stylesheet" hr ef="public/css/cart.css" /> 
->>>>>>> 7e4bf6b (feature login of admin)
 </head>
 
 <body>
     <?php 
-        require_once ROOT . DS . 'application' . DS . 'views' . DS . 'header.php';  
+        require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Cart.php';
+        $cart = new Cart;  
         
         $checkLogin = Session::get('customer_id');
         if ($checkLogin == false) {

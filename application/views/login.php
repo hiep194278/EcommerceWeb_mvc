@@ -9,12 +9,13 @@
 </head>
 <body>
     <?php
-        require_once ROOT . DS . 'application' . DS . 'views' . DS . 'header.php';  
-
         $login_check = Session::get('customer_login');
         if ($login_check) {
             header('Location:home');
         }
+
+        require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Customer.php';
+        $customer = new Customer;
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit']))
             $insertCustomer = $customer->insert_customer($_POST);
