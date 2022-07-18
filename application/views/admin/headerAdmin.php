@@ -35,27 +35,12 @@
                 <a href="addBrandAdmin">Thêm thương hiệu</a>
                 <a href="brandListAdmin">Danh sách thương hiệu</a>
             </div>
-        </div>
-        <div class="subnav">
-            <button class="subnavbtn">KHÁCH HÀNG<i class="fa fa-caret-down"></i></button>
-            <div class="subnav-content">
-                <a href="customerListAdmin">Danh sách khách hàng</a>
-            </div>
-        </div>  
-        <div class="subnav">
-            <button class="subnavbtn">ĐƠN HÀNG<i class="fa fa-caret-down"></i></button>
-            <div class="subnav-content">
-                <a href="orderAdmin">Danh sách đơn hàng</a>
-            </div>
         </div> 
-        <div class="subnav">
-            <button class="subnavbtn">THỐNG KÊ DOANH THU<i class="fa fa-caret-down"></i></button>
-            <div class="subnav-content">
-                <a href="revenueAdmin">DOANH THU</a>
-            </div>
-        </div>         
+        <a href="customerListAdmin">KHÁCH HÀNG</a>
+        <a href="orderAdmin">ĐƠN HÀNG</a>
+        <a href="revenueAdmin">DOANH THU</a>   
         <div class="user-menu">
-            <a href="account.html">
+            <a href="">
             ADMIN <?php echo Session::get('adminName') ?>
             </a>
             
