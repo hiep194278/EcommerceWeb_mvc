@@ -13,6 +13,9 @@
         require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Cart.php';
         $cart = new Cart;  
 
+        require_once ROOT . DS . 'application' . DS . 'models' . DS . 'Customer.php';
+        $customer = new Customer;
+
         $login_check = Session::get('customer_login');
         if ($login_check == false) {
             header('Location:login');
