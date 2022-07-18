@@ -7,7 +7,7 @@
     <title>Payment</title>
 </head>
 <body>
-<div style='min-height:50%'>
+<div style='min-height:100%'>
     <?php
         echo "<script>alert('Đặt hàng thành công! Mời bạn thanh toán tại quầy thu ngân')</script>";
         echo "<script>window.location = 'order'</script>";

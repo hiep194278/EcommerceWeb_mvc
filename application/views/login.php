@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="public/css/login.css">
 </head>
 <body>
-<div style='min-height:50%'>
+<div style='min-height:100%'>
     <?php
         $login_check = Session::get('customer_login');
         if ($login_check) {

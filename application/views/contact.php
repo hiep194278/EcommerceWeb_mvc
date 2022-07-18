@@ -10,7 +10,7 @@
   </head>
 
   <body> 
-  <div style='min-height:50%'>
+  <div style='min-height:100%'>
     <br />
 
     <h1 class="header">THÔNG TIN LIÊN HỆ ECOMMERCE</h1>
