@@ -226,14 +226,14 @@ class Cart extends BaseModel
     }
     public function get_count_sold_product_with_period($id,$from_date, $to_date)
     {
-        $query = "SELECT count(productID) as cnt FROM tbl_order WHERE orderDate > '$from_date' AND orderDate < '$to_date' AND productID = '$id' AND orderStatus = '2'";
+        $query = "SELECT sum(quantity) as cnt FROM tbl_order WHERE orderDate > '$from_date' AND orderDate < '$to_date' AND productID = '$id' AND orderStatus = '2'";
         $result = $this->db->select($query);
 
         return $result;
     }
     public function get_count_sold_product($id)
     {
-        $query = "SELECT count(productID) as cnt FROM tbl_order WHERE productID = '$id' AND orderStatus = '2'";
+        $query = "SELECT sum(quantity) as cnt FROM tbl_order WHERE productID = '$id' AND orderStatus = '2'";
         $result = $this->db->select($query);
 
         return $result;

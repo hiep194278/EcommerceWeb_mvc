@@ -97,7 +97,7 @@
                 $get_product_name = $cart->get_all_sold_product();
             }
             else {
-            $get_product_name = $cart->get_all_sold_product_with_period($from_date, $to_date);
+                $get_product_name = $cart->get_all_sold_product_with_period($from_date, $to_date);
             }
             if ($get_product_name) {
                 $i = 0;
@@ -113,7 +113,7 @@
                     $product_detail = $product->getproductbyID($result['productID']);
                     $result_detail = $product_detail->fetch_assoc();
                     $price= $result_detail['price'];
-                    echo $price;
+                    echo number_format($price, 0, ',', '.');
                 ?><a>₫</a></td>
             <td><?php
                         if($from_date ==  null)
@@ -131,7 +131,7 @@
             <td>
                 <?php
                     $total_price += $count*$price;
-                    echo $count*$price
+                    echo number_format($count*$price, 0, ',', '.');
                 ?>
                 <a>₫</a>
             </td>
@@ -144,7 +144,7 @@
     </table>
     <h1 style ="text-align: right">TOTAL REVENUE = 
         <?php
-            echo $total_price
+            echo number_format($total_price, 0, ',', '.')
         ?><a>₫</a>
     </h1>
 </body>
