@@ -103,7 +103,6 @@
 
         <label>Sản phẩm nổi bật</label>
         <select id="select" name="featured">
-            <option>Nổi bật</option>
             <?php
                 if ($result_product['featured'] == 1) {
             ?>

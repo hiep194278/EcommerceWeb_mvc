@@ -172,7 +172,7 @@
                     echo "Không";
             ?></td>
             <td><a href="editProductAdmin&productid=<?php echo $result['productID'] ?>">Chỉnh sửa</a> || 
-                <a onClick="return confirm('Bạn có muốn xóa thương hiệu này?')" href="productListAdmin&delID=<?php echo $result['productID']?>&oldimage=<?php echo $result['product_image'] ?>">Xóa</a></td>
+                <a onClick="return confirm('Bạn có muốn xóa sản phẩm này?')" href="productListAdmin&delID=<?php echo $result['productID']?>&oldimage=<?php echo $result['product_image'] ?>">Xóa</a></td>
         </tr>
         <?php
                 }

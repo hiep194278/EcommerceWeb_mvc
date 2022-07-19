@@ -119,7 +119,7 @@
             <td><?php echo $result['email'] ?></td>
             <td> 
                 <a href="customerInformationAdmin&customerid=<?php echo $result['customerID'] ?>">Hiện thông tin</a> || 
-                <a onClick="return confirm('Bạn có muốn xóa danh mục này?')" href="customerListAdmin&delID=<?php echo $result['customerID']?>">Xóa</a>
+                <a onClick="return confirm('Bạn có muốn xóa khách hàng này?')" href="customerListAdmin&delID=<?php echo $result['customerID']?>">Xóa</a>
             </td>
         </tr>
         <?php
