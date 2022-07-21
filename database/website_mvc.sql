@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 19, 2022 at 11:12 AM
+-- Generation Time: Jul 21, 2022 at 05:17 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.4
 
@@ -134,8 +134,9 @@ CREATE TABLE `tbl_customer` (
 --
 
 INSERT INTO `tbl_customer` (`customerID`, `customerName`, `customerAddress`, `phone`, `email`, `customerPassword`) VALUES
-(12, 'hggg', 'Hà Nội', '0114554', 'hn@', '2510c39011c5be704182423e3a695e91'),
-(13, 'Ngô Tân', 'Cầu Giấy', '0685421304', 'letan@gmail.com', 'e10adc3949ba59abbe56e057f20f883e');
+(12, 'hggg', 'Hà Nội', '0114554322', 'hn@', '2510c39011c5be704182423e3a695e91'),
+(13, 'Ngô Tân', 'Cầu Giấy', '0685421304', 'letan@gmail.com', 'e10adc3949ba59abbe56e057f20f883e'),
+(16, 'd', 'd', 'd', 'd', '8277e0910d750195b448797616e091ad');
 
 -- --------------------------------------------------------
 
@@ -155,6 +156,13 @@ CREATE TABLE `tbl_order` (
   `orderStatus` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `tbl_order`
+--
+
+INSERT INTO `tbl_order` (`orderID`, `productID`, `productName`, `customerID`, `quantity`, `price`, `productImage`, `orderDate`, `orderStatus`) VALUES
+(38, 50, 'Laptop Asus Gaming TUF FX506LHB-HN188W (i5 10300H/8GB RAM/512GB SSD/15.6 FHD 144Hz /GTX 1650 4GB/Win11/Đen)', 12, 2, '16299000', '5aa2148f4e.jpeg', '2022-07-19 16:40:49', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -171,6 +179,17 @@ CREATE TABLE `tbl_product` (
   `price` varchar(255) NOT NULL,
   `product_image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_product`
+--
+
+INSERT INTO `tbl_product` (`productID`, `productName`, `catID`, `brandID`, `product_desc`, `featured`, `price`, `product_image`) VALUES
+(50, 'Laptop Asus Gaming TUF FX506LHB-HN188W (i5 10300H/8GB RAM/512GB SSD/15.6 FHD 144Hz /GTX 1650 4GB/Win11/Đen)', 60, 4, 'CPU: Intel® Core™ i5-10300H 2.5 GHZ (8M Cache, up to 4.5 GHz, 4 nhân 8 luồng)\r\nRAM: 8GB DDR4 SO-DIMM 2933MHz\r\nỔ cứng: 512GB M.2 NVMe™ PCIe® 3.0 SSD\r\nVGA: NVIDIA GTX 1650 4GB\r\nMàn hình: 15.6-inch, FHD (1920 x 1080) 144hz, 16:9,NTSC: 45%, Độ sáng :250nits\r\nPhím: có đèn led\r\nHĐH: Win 11\r\nMàu: Đen', 1, '16299000', '5aa2148f4e.jpeg'),
+(51, 'Chuột game Logitech G203 Lilac (910-005853) (USB/RGB)', 61, 18, 'Logitech G203 Lilac\r\nThiết kế đối xứng nhỏ gọn\r\nĐộ phân giải : 8000 DPI\r\nLed RGB 16.8 triệu màu với tính năng Lightsync đồng bộ led của Logitech\r\nBổ sung hiệu ứng sóng cho dải led RGB của chuột\r\nMắt đọc được nâng cấp cho gia tốc tốt hơn\r\nSử dụng switch Omron cho độ bền cao hơn', 0, '409000', '81a254ba26.jpg'),
+(52, 'PC Asus All in One M3200WU (R3 5300U/4GB RAM/512GB SSD/21.5 inch Full HD/WL+BT/K+M/Win 11) (M3200WUAK-BA015W)', 63, 4, 'CPU: AMD Ryzen R3 5300U\r\nRAM: 4GB\r\nỔ cứng: 512GB SSD\r\nMàn hình: 21.5 inch Full HD\r\nHệ điều hành: Windows 11 Home SL\r\nTính năng: Wifi+ Bluetooth\r\nBàn phím chuột đi kèm', 1, '13000000', '404a1a852f.jpg'),
+(53, 'Tai nghe Razer Kraken Tournament Edition Wired Gaming Headset Green RZ04-02051100-R3M1', 62, 19, 'Tai nghe chơi game Razer Kraken Tournament Edition\r\nMàng loa kích cỡ 50mm\r\nCông nghệ âm thanh THX Spartial\r\nBộ điều khiển âm thanh tiện lợi, nút bấm kích hoạt HX Spartial tiện lợi\r\nThiết kế đệm tai nghe siêu mềm và độ đàn hồi cao.', 1, '2199000', 'c7fb816c62.jpg'),
+(54, 'iPhone 13 Pro Max 128GB', 58, 2, '6.7-inch, OLED, Super Retina XDR, 2778 x 1284 Pixels\r\n12.0 MP + 12.0 MP + 12.0 MP\r\n12.0 MP\r\nApple A15 Bionic\r\n128 GB', 1, '28999000', 'f5029ed3cb.png');
 
 -- --------------------------------------------------------
 
@@ -267,7 +286,7 @@ ALTER TABLE `tbl_brand`
 -- AUTO_INCREMENT for table `tbl_cart`
 --
 ALTER TABLE `tbl_cart`
-  MODIFY `cartID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `cartID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
 
 --
 -- AUTO_INCREMENT for table `tbl_category`
@@ -279,25 +298,25 @@ ALTER TABLE `tbl_category`
 -- AUTO_INCREMENT for table `tbl_customer`
 --
 ALTER TABLE `tbl_customer`
-  MODIFY `customerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `customerID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `tbl_order`
 --
 ALTER TABLE `tbl_order`
-  MODIFY `orderID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `orderID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `tbl_product`
 --
 ALTER TABLE `tbl_product`
-  MODIFY `productID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `productID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `tbl_wishlist`
 --
 ALTER TABLE `tbl_wishlist`
-  MODIFY `wishlistID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `wishlistID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
